@@ -9,8 +9,8 @@ class ProcessorService extends cds.ApplicationService {
     this.on('READ', 'Customers', (req) => this.onCustomerRead(req));
     
     this.on(['CREATE','UPDATE'], 'Incidents', (req, next) => this.onCustomerCache(req, next));
-    this.S4bupa = await cds.connect.to('API_BUSINESS_PARTNER');
-    this.remoteService = await cds.connect.to('RemoteService');
+    // this.S4bupa = await cds.connect.to('API_BUSINESS_PARTNER');
+    // this.remoteService = await cds.connect.to('RemoteService');
 
     return super.init();
   }
